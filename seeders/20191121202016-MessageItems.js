@@ -2,7 +2,7 @@
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.bulkInsert('Posts', [
+    return queryInterface.bulkInsert('MessageItems', [
       {
         message: 'The vegetable plays with the suited ass. The credible anatomy counts. Any container grows on top of a gone glass. My cheating student leaves the hail. A hell appears?',
         threadId: 1,
