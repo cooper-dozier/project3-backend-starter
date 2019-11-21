@@ -5,6 +5,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   Forum.associate = function(models) {
     // associations can be defined here
+    Forum.hasMany(models.Thread, {foreignKey: forumId})
   };
   return Forum;
 };

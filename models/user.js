@@ -5,7 +5,8 @@ module.exports = (sequelize, DataTypes) => {
     email: DataTypes.STRING
   }, {});
   User.associate = function(models) {
-    // associations can be defined here
+    User.hasMany(models.Post, {foreignKey: 'userId'})
+    User.hasMany(models.Thread, {foreignKey: 'userId'})
   };
   return User;
 };
