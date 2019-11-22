@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 const Thread = require('../models').Thread;
+const MessageItem = require('../models').MessageItem;
 
 //Create a Thread
 router.post('/', function (req, res) {
@@ -17,12 +18,24 @@ router.get('/', (req, res) => {
     })
 })
 //Get one Thread 
+// router.get('/:id', (req, res) => {
+//     Thread.findByPk(req.params.id)
+//         .then(threads => {
+//             res.json({ threads })
+//         })
+// })
+
 router.get('/:id', (req, res) => {
-    Thread.findByPK(req.paramas.id)
+    Thread.findByPk(req.params.id, {
+        include: [{ model: MessageItem}]
+    })
         .then(threads => {
             res.json({ threads })
         })
 })
+
+
+
 //Get Update on Thread
 router.put('/:id', (req, res) => {
     Thread.update(req.body, {
