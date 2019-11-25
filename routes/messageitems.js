@@ -27,12 +27,13 @@ router.get('/:id', (req, res) => {
         })
 })
 
-//Create a post 
+// Create a post 
+// return the new messageItem
 router.post('/', (req, res) => {
     MessageItem.create({ message: req.body.message, userId: req.body.userId, threadId: req.body.threadId })
-        .then(() => {
-            return MessageItem.findAll()
-        })
+        // .then(() => {
+        //     return MessageItem.findAll()
+        // })
         .then(messageItems => {
             res.json({ messageItems })
         })

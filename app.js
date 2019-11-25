@@ -26,6 +26,7 @@ app.use('/api/users', require('./routes/users'));
 app.use('/api/messageitems', require('./routes/messageitems'));
 app.use('/api/forums', require('./routes/forums'));
 app.use('/api/threads', require('./routes/threads'));
+app.use('/api/public/', require('./routes/public'));
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
