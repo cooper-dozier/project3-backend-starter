@@ -6,7 +6,6 @@ const Thread = require('../models').Thread;
 router.get('/', (req, res) => {
     Forum.findAll()
         .then(forums => {
-            console.log(res)
             res.json({ forums })
         })
 })
@@ -17,6 +16,7 @@ router.get('/:id', (req, res) => {
     })
         .then(forums => {
             res.json({ forums })
+            console.log(res.json({ forums }))
         })
 })
 

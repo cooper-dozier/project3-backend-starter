@@ -9,14 +9,14 @@ router.get('/', function (req, res) {
       res.json({ users })
     })
 });
-//Create a user
+// Create a user
 router.post('/', function (req, res) {
   User.create(req.body)
     .then(users => {
       res.json({ users })
     })
 });
-//Updating a user
+// Updating a user
 router.put('/:id', (req, res) => {
   User.update(req.body, {
       where: { id: req.params.id }
