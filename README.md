@@ -78,7 +78,7 @@ Note: PostgreSQL 'varchar' datatype is called 'string' in Sequelize
 
 1. Fork and clone or just clone [this repository](https://github.com/cooper-dozier/project3-backend-starter)
     - [Github help for cloning](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
-1. Change to the directory you just cloned the project to your machine with your terminal or CMD prompt
+1. Change to the directory you just cloned the project to on your machine with your terminal or CMD prompt
 1. In terminal, run 'npm install'
 1. Download and Install PostGreSQL -  go [here](https://www.postgresql.org/download/), select your OS, and follow instructions. The rest is out of the scope of this document.
     - You will need to supply a username and password for the database, I think 
