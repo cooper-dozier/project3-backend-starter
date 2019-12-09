@@ -1,7 +1,7 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   const MessageItem = sequelize.define('MessageItem', {
-    message: DataTypes.STRING
+    message: DataTypes.TEXT
   }, {});
   MessageItem.associate = function(models) {
     MessageItem.belongsTo(models.Thread, {foreignKey: 'threadId'})
